@@ -22,6 +22,7 @@ body {
     width: 800px;
     height: 400px;
     padding: 20px;
+    position: relative;
 }
 
 #pic {
@@ -37,5 +38,16 @@ body {
 
 #heading {
     font-size: 48px;
+}
+
+#next {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 10%;
+    width: 5%;
+    background-color: ghostwhite;
+    border: 0;
 }
 
