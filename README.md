@@ -1,6 +1,6 @@
 # anniversary-card
 
-get the background right
+get the background right -done
 create empty foreground card
 animate card states
 
