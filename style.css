@@ -32,12 +32,20 @@ body {
 
 #text {
     text-align: justify;
+    font-family: 'Architects Daughter', cursive;
     font-size: 22px;
     line-height: 1.5;
 }
 
+.header {
+    padding-bottom: 20px;
+}
+
 #heading {
-    font-size: 48px;
+    font-size: 54px;
+    font-weight: 100;
+    font-family: 'Parisienne', cursive;
+    /* color: grey; */
 }
 
 #next {
@@ -49,5 +57,9 @@ body {
     width: 5%;
     background-color: ghostwhite;
     border: 0;
+}
+
+#next:focus {
+    outline: none;
 }
 
