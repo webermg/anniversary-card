@@ -23,7 +23,8 @@ const next = document.getElementById("next");
 const init = () => {
     index = 0;
     setState(cardStates, index);
-}
+
+};
 
 const setState = (states,index) => {
     if(index < 0 || index >= states.length) return;
@@ -32,14 +33,57 @@ const setState = (states,index) => {
         pic.style.paddingLeft = "0px";
         pic.style.paddingRight = "20px";
     }
-    pic.style.float = "left";
+    else {
+        pic.style.float = "right";
+        pic.style.paddingLeft = "20px";
+        pic.style.paddingRight = "0px";
+    }
     pic.setAttribute("src", states[index].src);
     text.textContent = states[index].text;
-}
+    setTimeout(() => {
+        next.style.opacity = "100%";
+    }, 7000);
+    delay(fadeIn, pic, 3000, 2000);
+    delay(fadeIn, text, 3000, 4000);
+    
+};
+
+const delay = (func, element, duration, delay) => {
+    setTimeout(() => {
+        func(element, duration);
+    }, delay);
+};
+
+const fadeIn = (element, duration) => {
+    let opacity = 0;
+    let interval = duration/100;
+    const animation = setInterval(() => {
+        element.style.opacity = `${opacity}%`;
+        opacity++;
+        if(opacity >= 100) clearInterval(animation);
+    }, interval);
+};
+
+const fadeOut = (element, duration) => {
+    let opacity = 100;
+    let interval = duration/100;
+    const animation = setInterval(() => {
+        element.style.opacity = `${opacity}%`;
+        opacity--;
+        if(opacity <= 0) clearInterval(animation);
+    }, interval);
+};
 
 next.addEventListener("click", e => {
+    //fadeout
+    fadeOut(pic, 2000);
+    fadeOut(text, 2000);
+    fadeOut(next, 2000);
+    
     index = index+1 < cardStates.length ? index+1 : 0;
-    setState(cardStates, index);
+    setTimeout(() => {
+        setState(cardStates, index);
+    },3000);
 });
 
 init();
