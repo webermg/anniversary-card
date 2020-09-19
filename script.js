@@ -2,23 +2,25 @@
 const cardStates = [
     {
         src: "assets/photo1.jpg",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt ante ut tortor consectetur tincidunt. Morbi finibus nisi vel mi dignissim, eget dapibus tellus molestie. Nulla rhoncus sem sit amet vulputate pellentesque. Donec aliquet libero condimentum quam mattis, sit amet tempor tortor suscipit. Quisque eleifend risus a eros pulvinar, ac hendrerit lorem congue. Nunc libero orci, finibus sed interdum et, fringilla quis ex. Morbi tristique, lacus eget pellentesque viverra, dui elit porttitor ligula, quis sollicitudin lacus nunc eget nibh. Cras feugiat hendrerit eros, in lobortis enim dignissim non. Cras et molestie diam, in lobortis tortor. Morbi non orci luctus urna blandit consequat vel ac lacus."
+        text: "I can't believe it has been ten years, it seems like just yesterday you were all smiles at the wedding. I remember you were so anxious about whether anyone enjoyed themselves. It was your day, you should have worried about yourself! That seems like forever ago, going to Ireland, soon after quitting the job in Virginia to move out to Seattle. I'm glad we did though, I much prefer Seattle to Newport News, housing prices aside. From there we got new jobs, bought a house, and went to Italy but we were still carefree children just living our lives a day at a time. But our idyllic lives wouldn't last forever. It wasn't long before we started trying to plant a seed, and oh boy did we ever plant one. Five years ago everything would change forever when in came...."
     },
     {
         src: "assets/photo2.jpg",
-        text: "In neque eros, ornare nec arcu non, tempor consectetur eros. Proin tempor felis tellus, et porta massa malesuada vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla consectetur arcu sed libero placerat, at commodo massa sollicitudin. Aenean eleifend tortor nisl, id fermentum ante tincidunt non. Mauris nec eleifend metus. Vivamus tellus purus, ullamcorper sed ex lobortis, venenatis tincidunt libero. Nam ultrices est quam, vitae hendrerit magna fermentum ornare. Nam consequat tristique sapien, vel vulputate diam iaculis eu. Vestibulum a tellus consequat elit maximus sodales at id metus. Etiam ut lacus sed lectus convallis tristique."
+        text: "Ah, April 19, 2015, the day of reckoning. That was a day I will always remember, the day that little Owie arrived. We had no idea of how that would change things, especially given that he would turn out to be even more special than we thought. But really, that day that Owen was born was truly one of the few days that stand out in my life. I remember being almost overcome with emotion, which as you know is strange for me. Even if it meant we could no longer live our free lives, Owen is still one of the best things that has ever happened to us and I just love snuggling with him every night."
     },
     {
         src: "assets/photo3.jpg",
-        text: "Mauris suscipit sapien diam, gravida aliquam turpis varius sit amet. Vivamus interdum velit dolor. In hac habitasse platea dictumst. Curabitur eu laoreet nunc. Sed ultrices varius ligula vel fringilla. Aliquam odio dui, vulputate et euismod non, egestas in ligula. Donec convallis laoreet convallis. Phasellus faucibus interdum mollis. Aenean in massa ut odio fermentum luctus a non tellus. Nunc volutpat arcu vel accumsan mollis. Praesent et congue ex. Vivamus sagittis purus ut magna rutrum, sed auctor ipsum molestie. Integer molestie tellus quis molestie laoreet."
+        text: "Now it's five years later and the time has flown by, I really feel like I've missed a year or something. Owen is starting school, I'm in school again, and we're all stuck at home because of the plague. At least I'm glad to be stuck at home, and it does give us more time for coffee in the mornings. Now it feels like we are again in a time of change like that of ten years ago, new jobs, new house eventually, and who knows what the future holds. One thing is sure though, the future holds you and me, because we will be together forever just like a song. I love you always, and you will always be my cutie no matter what happens. Well maybe Owen is the new cutie, but you are the OG cutie. Happy anniversary, and may we have many more growing old and grumpy together!"
     }
 ];
+const sig = "Love, Matt";
 let index;
 
 //elements
 const pic = document.getElementById("pic");
 const text = document.getElementById("text");
 const next = document.getElementById("next");
+const signature = document.getElementById("signature");
 
 const init = () => {
     index = 0;
@@ -48,6 +50,11 @@ const setState = (states,index) => {
             next.style.cursor = "pointer";
             next.disabled = false;
         }, 6000);
+    }
+    else {
+        signature.style.display = "block";
+        signature.textContent = sig;
+        delay(fadeIn, signature, 2000, 6000);
     }
     delay(fadeIn, pic, 3000, 1000);
     delay(fadeIn, text, 3000, 3000);
