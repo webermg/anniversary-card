@@ -1,19 +1,19 @@
 //card state info
 const cardStates = [
     {
-        src: "assets/photo1.jpg",
-        text: "I can't believe it has been ten years, it seems like just yesterday you were all smiles at the wedding. I remember you were so anxious about whether anyone enjoyed themselves. It was your day, you should have worried about yourself! That seems like forever ago, going to Ireland, soon after quitting the job in Virginia to move out to Seattle. I'm glad we did though, I much prefer Seattle to Newport News, housing prices aside. From there we got new jobs, bought a house, and went to Italy but we were still carefree children just living our lives a day at a time. But our idyllic lives wouldn't last forever. It wasn't long before we started trying to plant a seed, and oh boy did we ever plant one. Five years ago everything would change forever when in came...."
+        src: "http://placekitten.com/200/300",
+        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum laudantium ex repellat, ipsa cumque amet hic iusto! Optio voluptates totam sit reprehenderit dignissimos, itaque, impedit incidunt facere, in quasi natus!"
     },
     {
-        src: "assets/photo2.jpg",
-        text: "Ah, April 19, 2015, the day of reckoning. That was a day I will always remember, the day that little Owie arrived. We had no idea of how that would change things, especially given that he would turn out to be even more special than we thought. But really, that day that Owen was born was truly one of the few days that stand out in my life. I remember being almost overcome with emotion, which as you know is strange for me. Even if it meant we could no longer live our free lives, Owen is still one of the best things that has ever happened to us and I just love snuggling with him every night."
+        src: "http://placekitten.com/250/300",
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque eveniet, deleniti accusamus aspernatur eaque provident dolorum libero? Ea incidunt distinctio in voluptates aliquam, voluptatum sit ullam repudiandae doloribus perspiciatis iste."
     },
     {
-        src: "assets/photo3.jpg",
-        text: "Now it's five years later and the time has flown by, I really feel like I've missed a year or something. Owen is starting school, I'm in school again, and we're all stuck at home because of the plague. At least I'm glad to be stuck at home, and it does give us more time for coffee in the mornings. Now it feels like we are again in a time of change like that of ten years ago, new jobs, new house eventually, and who knows what the future holds. One thing is sure though, the future holds you and me, because we will be together forever just like a song. I love you always, and you will always be my cutie no matter what happens. Well maybe Owen is the new cutie, but you are the OG cutie. Happy anniversary, and may we have many more growing old and grumpy together!"
+        src: "http://placekitten.com/175/300",
+        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente provident est saepe impedit, unde quod error officia ad tenetur, reprehenderit cum ipsa facere nobis earum molestias deserunt! Commodi, ducimus obcaecati!"
     }
 ];
-const sig = "Love, Matt";
+const sig = "Signature";
 let index;
 
 //elements
